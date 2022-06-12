@@ -30,12 +30,23 @@ public:
 		this->strada = strada;
 
 	}
-	
+
 	void setNumar(string numar) {
 		this->numar = numar;
 	}
-	
+
 	void setDetalii(string detalii) {
 		this->detalii = detalii;
+	}
+
+	friend bool operator==(const Adresa& lhs, const Adresa& rhs) {
+		return lhs.oras == rhs.oras &&
+			lhs.strada == rhs.strada &&
+			lhs.numar == rhs.numar &&
+			lhs.detalii == rhs.detalii;
+	}
+
+	friend bool operator!=(const Adresa& lhs, const Adresa& rhs) {
+		return !(rhs == lhs);
 	}
 };

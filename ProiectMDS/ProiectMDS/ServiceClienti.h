@@ -12,5 +12,17 @@ public:
 	void addClient(Client c) {
 		this->repository.addClient(c);
 	}
+
+	void deleteClient(Client c) {
+		this->repository.deleteClient(c);
+	}
+
+	void findClient(const string& CNP) {
+		this->repository.findClient(CNP);
+	}
+
+	void updateClient(Client cv, Client cn) {
+		this->repository.updateClient(cv, cn);
+	}
 };
 

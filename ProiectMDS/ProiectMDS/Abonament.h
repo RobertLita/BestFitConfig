@@ -31,6 +31,15 @@ public:
 
 	void setPret(float pretTotal);
 
+	friend bool operator==(const Abonament& lhs, const Abonament& rhs) {
+		return lhs.facilitati == rhs.facilitati &&
+			lhs.pretTotal == rhs.pretTotal &&
+			lhs.denumire == rhs.denumire;
+	}
+
+	friend bool operator!=(const Abonament& lhs, const Abonament& rhs) {
+		return !(rhs == lhs);
+	}
 
 };
 
