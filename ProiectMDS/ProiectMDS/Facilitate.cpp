@@ -9,7 +9,7 @@ string Facilitate::getDescriere() {
 	return this->descriere;
 }
 
-float Facilitate::getPret() {
+int Facilitate::getPret() {
 	return this->pretIndividual;
 }
 
@@ -22,6 +22,6 @@ void Facilitate::setDescriere(string descriere) {
 	this->descriere = descriere;
 }
 
-void Facilitate::setPret(float pret) {
+void Facilitate::setPret(int pret) {
 	this->pretIndividual = pret;
 }

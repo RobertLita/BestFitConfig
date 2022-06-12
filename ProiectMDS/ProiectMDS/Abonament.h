@@ -2,6 +2,7 @@
 #include "Facilitate.h"
 #include <string>
 #include <vector>
+#include <stdexcept>
 
 using std::string, std::vector;
 
@@ -9,7 +10,7 @@ class Abonament
 {
 private:
 	vector<Facilitate> facilitati;
-	float pretTotal;
+	int pretTotal;
 	string denumire;
 public:
 	Abonament();
@@ -19,27 +20,40 @@ public:
 		this->facilitati = ot.facilitati;
 
 	}
-	Abonament(string denumire, float pretTotal) {
+	Abonament(string denumire, int pretTotal) {
 		this->denumire = denumire;
 		this->pretTotal = pretTotal;
 	}
 
+
+
 	vector <Facilitate> getFacilitati();
-	float getPret();
+
+	int getPret();
+
+	string getDenumire();
 
 	void adaugaFacilitate(Facilitate f);
 
-	void setPret(float pretTotal);
+	void setPret(int pretTotal);
 
-	/*friend bool operator==(const Abonament& lhs, const Abonament& rhs) {
-		return lhs.facilitati == rhs.facilitati &&
-			lhs.pretTotal == rhs.pretTotal &&
-			lhs.denumire == rhs.denumire;
+	void  setDenumire(string denumire);
+
+	bool esteValid() {
+
+		if (this->pretTotal < 0) {
+			throw invalid_argument("Pretul nu poate sa fie negativ.");
+		}
 	}
 
-	friend bool operator!=(const Abonament& lhs, const Abonament& rhs) {
+
+	friend bool operator==(Abonament& lhs, Abonament& rhs) {
+		return !lhs.getDenumire().compare(rhs.getDenumire());
+	}
+
+	friend bool operator!=(Facilitate& lhs, Facilitate& rhs) {
 		return !(rhs == lhs);
-	}*/
+	}
 
 };
 
