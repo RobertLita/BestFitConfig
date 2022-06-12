@@ -12,5 +12,18 @@ public:
 	void addAbonament(Abonament a) {
 		this->repository.addAbonament(a);
 	}
+
+	void stergeAbonament(Abonament a) {
+		this->repository.stergeAbonament(a);
+	}
+
+	void findAbonament(string denumire) {
+		this->repository.findAbonament(denumire);
+	}
+
+	void updateAbonament(Abonament av, Abonament an) {
+		this->repository.updateAbonament(av, an);
+	}
+
 };
 
