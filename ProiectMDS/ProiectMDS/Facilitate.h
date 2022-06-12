@@ -23,5 +23,6 @@ public:
 	void setDescriere(string descriere);
 	void setPret(float pretIndividual);
 
+
 };
 

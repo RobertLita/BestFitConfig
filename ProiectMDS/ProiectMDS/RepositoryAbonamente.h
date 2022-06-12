@@ -16,9 +16,25 @@ public:
 	RepositoryAbonamente() {};
 
 	void addAbonament(Abonament a) {
+		for (const auto& abonament : this->abonamente) {
+			if (a.equalsAbonamente(abonament)) {
+				throw error1("Abonamentul exista deja!")
+			}
+		}
+
 		this->abonamente.push_back(a);
 	}
 
+	
+
+	void deleteAbonament(Abonament a) {
+		for (Abonament ab : abonamente) {
+			
+			if (a.equalsAbonamente(ab))
+				abonamente.erase(i);
+	
+		}
+	}
 
 };
 

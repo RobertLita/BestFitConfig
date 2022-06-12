@@ -1,8 +1,14 @@
 #pragma once
 
 #include <string>
+#include <chrono>
+#include <type_traits>
+#include <format>
+#include <regex>
 
 using std::string;
+using std::regex;
+using std::regex_match;
 
 class Adresa
 {
@@ -37,5 +43,11 @@ public:
 	
 	void setDetalii(string detalii) {
 		this->detalii = detalii;
+	}
+
+	bool esteValid(Adresa a) {
+		bool rez;
+		rez	= !std::regex_match(a.oras, std::regex("^[A-Za-z]+$")) && !std::regex_match(a.strada, std::regex("^[A-Za-z]+$")) && !std::regex_match(a.numar, std::regex("^[0-9]+$"));
+		return rez;
 	}
 };

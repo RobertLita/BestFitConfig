@@ -4,7 +4,7 @@
 #include <string>
 #include "Facilitate.h"
 
-using std::vector, std::string;
+using std::vector;  std::string;
 
 class RepositoryFacilitati
 {
