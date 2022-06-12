@@ -11,9 +11,10 @@ class RepositoryFacilitati
 private:
 	vector <Facilitate> facilitati;
 
-	RepositoryFacilitati();
+public:
+	RepositoryFacilitati() {};
 
-	void addClient(Facilitate f) {
+	void addFacilitate (Facilitate f) {
 		this->facilitati.push_back(f);
 	}
 

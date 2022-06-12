@@ -70,6 +70,21 @@
     <ClCompile Include="RepositoryAbonamente.cpp">
       <Filter>Source Files\Repositories</Filter>
     </ClCompile>
+    <ClCompile Include="ServiceFacilitati.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceClienti.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceAbonamente.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Facilitate.h">
@@ -91,6 +106,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RepositoryAbonamente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceAbonamente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceClienti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceFacilitati.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
