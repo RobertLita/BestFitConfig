@@ -85,9 +85,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Date.cpp" />
+    <ClCompile Include="GUI.cpp" />
     <ClCompile Include="RepositoryAbonamente.cpp" />
     <ClCompile Include="RepositoryClienti.cpp" />
     <ClCompile Include="RepositoryFacilitati.cpp" />
+    <ClCompile Include="ServiceAbonamente.cpp" />
+    <ClCompile Include="ServiceClienti.cpp" />
+    <ClCompile Include="ServiceFacilitati.cpp" />
     <QtRcc Include="ProiectMDS.qrc" />
     <QtUic Include="ProiectMDS.ui" />
     <QtMoc Include="ProiectMDS.h" />
@@ -102,10 +107,15 @@
     <ClInclude Include="Abonament.h" />
     <ClInclude Include="Adresa.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="Date.h" />
     <ClInclude Include="Facilitate.h" />
+    <ClInclude Include="GUI.h" />
     <ClInclude Include="RepositoryAbonamente.h" />
     <ClInclude Include="RepositoryClienti.h" />
     <ClInclude Include="RepositoryFacilitati.h" />
+    <ClInclude Include="ServiceAbonamente.h" />
+    <ClInclude Include="ServiceClienti.h" />
+    <ClInclude Include="ServiceFacilitati.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

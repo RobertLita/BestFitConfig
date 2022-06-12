@@ -10,8 +10,9 @@ class RepositoryClienti
 {
 private:
 	vector <Client> clienti;
+public:
 
-	RepositoryClienti();
+	RepositoryClienti() {};
 
 	void addClient(Client c) {
 		this->clienti.push_back(c);

@@ -2,6 +2,7 @@
 #include "Adresa.h"
 #include "Abonament.h"
 #include <string>;
+#include "Date.h"
 
 using std::string;
 
@@ -9,15 +10,18 @@ class Client
 {
 private:
 	Adresa adresa;
-	string nume, prenume;
+	string nume, prenume, CNP;
 	Abonament abonament;
+	Date data_expirare;
 
 public:
-	Client(Adresa adresa, string nume, string prenume, Abonament abonament) {
+	Client(Adresa adresa, string nume, string prenume, string CNP,  Abonament abonament, Date data) {
 		this->adresa = adresa;
 		this->nume = nume;
 		this->prenume = prenume;
 		this->abonament = abonament;
+		this->CNP = CNP;
+		this->data_expirare = data;
 	}
 
 	Adresa getAdresa() { return this->adresa; }
