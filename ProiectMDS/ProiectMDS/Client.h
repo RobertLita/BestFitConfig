@@ -80,11 +80,11 @@ public:
 		return this->adresa.esteValid() && this->data_expirare.esteValid();
 	}
 
-	friend bool operator==(const Client& lhs, const Client& rhs) {
-		return lhs.CNP == rhs.CNP;
+	friend bool operator==(Client& lhs, Client& rhs) {
+		return !lhs.getCNP().compare(rhs.getCNP());
 	}
 
-	friend bool operator!=(const Client& lhs, const Client& rhs) {
+	friend bool operator!=(Client& lhs, Client& rhs) {
 		return !(rhs == lhs);
 	}
 
