@@ -1,10 +1,11 @@
 #pragma once
 #include "Adresa.h"
 #include "Abonament.h"
-#include <string>;
+#include <string>
+#include <stdexcept>
 #include "Date.h"
 
-using std::string;
+using namespace std;
 
 class Client
 {
@@ -15,7 +16,7 @@ private:
 	Date data_expirare;
 
 public:
-	Client(Adresa adresa, string nume, string prenume, string CNP,  Abonament abonament, Date data) {
+	Client(Adresa adresa, string nume, string prenume, string CNP, Abonament abonament, Date data) {
 		this->adresa = adresa;
 		this->nume = nume;
 		this->prenume = prenume;
@@ -29,6 +30,8 @@ public:
 	string getNume() { return this->nume; }
 
 	string getPrenume() { return this->prenume; }
+
+	string getCNP() { return this->CNP; }
 
 	Abonament getAbonament() { return this->abonament; }
 
@@ -48,14 +51,42 @@ public:
 		this->prenume = prenume;
 	}
 
-	void setAbonament(Abonament ot){
+	void setAbonament(Abonament ot) {
 		this->abonament = ot;
 	}
 
+	bool esteValid() {
+		if (this->CNP.length() != 13) {
+			throw invalid_argument("CNP-ul trebuie sa aiba lungimea 13!");
+		}
+		for (char i : this->CNP) {
+			if (isalpha(i)) {
+				throw invalid_argument("CNP-ul trebuie sa contina doar cifre!");
+			}
+		}
 
+		for (char i : this->nume) {
+			if (!isalpha(i) && i != ' ' && i != '-') {
+				throw invalid_argument("Numele trebuie sa contina doar litere!");
+			}
+		}
 
+		for (char i : this->prenume) {
+			if (!isalpha(i) && i != ' ' && i != '-') {
+				throw invalid_argument("Preumele trebuie sa contina doar litere!");
+			}
+		}
 
+		return this->adresa.esteValid() && this->data_expirare.esteValid();
+	}
 
+	friend bool operator==(const Client& lhs, const Client& rhs) {
+		return lhs.CNP == rhs.CNP;
+	}
+
+	friend bool operator!=(const Client& lhs, const Client& rhs) {
+		return !(rhs == lhs);
+	}
 
 };
 
