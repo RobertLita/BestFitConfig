@@ -17,7 +17,7 @@ public:
 		this->repository.deleteClient(c);
 	}
 
-	void findClient(const string& CNP) {
+	void findClient(string CNP) {
 		this->repository.findClient(CNP);
 	}
 

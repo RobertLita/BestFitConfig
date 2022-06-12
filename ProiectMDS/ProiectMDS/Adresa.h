@@ -1,8 +1,10 @@
 #pragma once
 
 #include <string>
+#include <regex>
 
 using std::string;
+using std::regex_match;
 
 class Adresa
 {
@@ -40,13 +42,19 @@ public:
 	}
 
 	friend bool operator==(const Adresa& lhs, const Adresa& rhs) {
-		return lhs.oras == rhs.oras &&
-			lhs.strada == rhs.strada &&
-			lhs.numar == rhs.numar &&
-			lhs.detalii == rhs.detalii;
+		return !(lhs.oras.compare(rhs.oras)||
+			lhs.strada.compare(rhs.strada) ||
+			lhs.numar.compare(rhs.numar) ||
+			lhs.detalii.compare(rhs.detalii));
 	}
 
 	friend bool operator!=(const Adresa& lhs, const Adresa& rhs) {
 		return !(rhs == lhs);
 	}
+	bool esteValid() {
+		bool rez;
+		rez = !std::regex_match(oras, std::regex("^[A-Za-z]+$")) && !std::regex_match(strada, std::regex("^[A-Za-z]+$")) && !std::regex_match(numar, std::regex("^[0-9]+$"));
+		return rez;
+	}
+
 };

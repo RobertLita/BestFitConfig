@@ -35,7 +35,7 @@ public:
 	//	}
 
 	void addClient(Client c) {
-		for (const auto& client : this->clienti) {
+		for (auto& client : this->clienti) {
 			if (client == c) {
 				throw runtime_error("Clientul exista deja!");
 			}
@@ -59,7 +59,7 @@ public:
 		}
 	}
 
-	Client findClient(const string& CNP) {
+	Client findClient(string CNP) {
 		for (auto& client : this->clienti) {
 			if (client.getCNP() == CNP) {
 				return client;

@@ -52,5 +52,22 @@ public:
     friend bool operator!=(const Date& lhs, const Date& rhs) {
         return !(rhs == lhs);
     }
+
+    bool esteValid() {
+        if (this->an == 2022) {
+            if (this->luna <= 12 && this->luna > 0) {
+                if (this->luna == 2) {
+                    if (this->zi > 0 && this->zi <= 28)
+                        return true;
+                }
+                if (this->zi > 0 && this->zi <= 31)
+                    return true;
+            }
+        }
+        return false;
+
+    }
+
+
 };
 
