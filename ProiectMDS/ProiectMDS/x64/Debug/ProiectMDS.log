@@ -1,0 +1,17 @@
+﻿  Reading Qt configuration (C:/Qt/6.1.0/msvc2019_64/bin/qmake)
+  uic ProiectMDS.ui
+  rcc ProiectMDS.qrc
+  moc ProiectMDS.h
+   RCC: Warning: No resources in 'C:\Users\andre\source\repos\BestFitConfig\ProiectMDS\ProiectMDS\ProiectMDS.qrc'.
+  RepositoryAbonamente.cpp
+  RepositoryClienti.cpp
+  RepositoryFacilitati.cpp
+  Abonament.cpp
+  Adresa.cpp
+  Client.cpp
+  Facilitate.cpp
+  ProiectMDS.cpp
+  main.cpp
+  qrc_ProiectMDS.cpp
+  moc_ProiectMDS.cpp
+  ProiectMDS.vcxproj -> C:\Users\andre\Source\Repos\BestFitConfig\ProiectMDS\x64\Debug\ProiectMDS.exe
