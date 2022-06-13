@@ -124,4 +124,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="facilitati.csv">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="abonamente.csv">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="clienti.csv">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

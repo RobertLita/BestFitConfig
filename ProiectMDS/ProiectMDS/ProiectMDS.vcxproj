@@ -117,6 +117,11 @@
     <ClInclude Include="ServiceClienti.h" />
     <ClInclude Include="ServiceFacilitati.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="abonamente.csv" />
+    <None Include="clienti.csv" />
+    <None Include="facilitati.csv" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />
