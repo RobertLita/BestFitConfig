@@ -2,16 +2,18 @@
 
 #include <string>
 #include <regex>
+#include <stdexcept>
 
 using std::string;
 using std::regex_match;
+using std::runtime_error;
 
 class Adresa
 {
 private:
 	string oras, strada, numar, detalii;
 public:
-	Adresa();
+	Adresa() {};
 
 	Adresa(string oras, string strada, string numar, string detalii) {
 		this->oras = oras;
@@ -52,9 +54,11 @@ public:
 		return !(rhs == lhs);
 	}
 	bool esteValid() {
-		bool rez;
+		/*bool rez;
 		rez = !std::regex_match(oras, std::regex("^[A-Za-z]+$")) && !std::regex_match(strada, std::regex("^[A-Za-z]+$")) && !std::regex_match(numar, std::regex("^[0-9]+$"));
-		return rez;
+		if (!rez)
+			throw runtime_error("Adresa este invalida");*/
+		return true;
 	}
 
 };

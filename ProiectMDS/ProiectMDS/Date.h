@@ -2,6 +2,10 @@
 
 #include <cstring>
 #include <string>
+#include <chrono>
+#include <ctime>
+
+using std::string;
 
 class Date
 {
@@ -54,7 +58,7 @@ public:
     }
 
     bool esteValid() {
-        if (this->an == 2022) {
+        if (this->an > 0) {
             if (this->luna <= 12 && this->luna > 0) {
                 if (this->luna == 2) {
                     if (this->zi > 0 && this->zi <= 28)

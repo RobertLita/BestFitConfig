@@ -2,18 +2,27 @@
 
 
 vector <Facilitate> Abonament::getFacilitati() {
-	return this->facilitati;
+    return this->facilitati;
 }
 
 
-float Abonament::getPret() {
-	return this->pretTotal;
+int Abonament::getPret() {
+    return this->pretTotal;
 }
+
+string Abonament::getDenumire() {
+    return this->denumire;
+}
+
 
 void Abonament::adaugaFacilitate(Facilitate f) {
-	this->facilitati.push_back(f);
+    this->facilitati.push_back(f);
 }
 
-void Abonament::setPret(float pretTotal) {
-	this->pretTotal = pretTotal;
+void Abonament::setPret(int pretTotal) {
+    this->pretTotal = pretTotal;
+}
+
+void Abonament::setDenumire(string denumire) {
+    this->denumire = denumire;
 }

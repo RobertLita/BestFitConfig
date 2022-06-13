@@ -17,12 +17,19 @@ public:
 		this->repository.deleteClient(c);
 	}
 
-	void findClient(string CNP) {
-		this->repository.findClient(CNP);
+	Client findClient(string CNP) {
+		return this->repository.findClient(CNP);
 	}
+	bool existaClient(string CNP) {
+		return this->repository.existaClient(CNP);
+	}
+
 
 	void updateClient(Client cv, Client cn) {
 		this->repository.updateClient(cv, cn);
+	}
+	vector <Client> getClienti() {
+		return repository.getClienti();
 	}
 };
 

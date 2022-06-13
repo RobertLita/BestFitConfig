@@ -25,6 +25,18 @@ public:
 		this->data_expirare = data;
 	}
 
+	Client(const Client& ot) {
+		this->adresa = ot.adresa;
+		this->nume = ot.nume;
+		this->prenume = ot.prenume;
+		this->abonament = ot.abonament;
+		this->CNP = ot.CNP;
+		this->data_expirare = ot.data_expirare;
+	}
+
+	Client() = default;
+
+
 	Adresa getAdresa() { return this->adresa; }
 
 	string getNume() { return this->nume; }
@@ -32,6 +44,23 @@ public:
 	string getPrenume() { return this->prenume; }
 
 	string getCNP() { return this->CNP; }
+
+	void setCNP(string cnp) {
+		this->CNP = cnp;
+	}
+
+	void setAdresa(Adresa a) {
+		this->adresa = a;
+	}
+
+	void setData(Date d) {
+		this->data_expirare.setZi(d.getZi());
+		this->data_expirare.setLuna(d.getLuna());
+		this->data_expirare.setAn(d.getAn());
+
+	}
+
+	Date getData() { return this->data_expirare; }
 
 	Abonament getAbonament() { return this->abonament; }
 
@@ -57,23 +86,23 @@ public:
 
 	bool esteValid() {
 		if (this->CNP.length() != 13) {
-			throw invalid_argument("CNP-ul trebuie sa aiba lungimea 13!");
+			throw runtime_error("CNP-ul trebuie sa aiba lungimea 13!");
 		}
 		for (char i : this->CNP) {
 			if (isalpha(i)) {
-				throw invalid_argument("CNP-ul trebuie sa contina doar cifre!");
+				throw runtime_error("CNP-ul trebuie sa contina doar cifre!");
 			}
 		}
 
 		for (char i : this->nume) {
 			if (!isalpha(i) && i != ' ' && i != '-') {
-				throw invalid_argument("Numele trebuie sa contina doar litere!");
+				throw runtime_error("Numele trebuie sa contina doar litere!");
 			}
 		}
 
 		for (char i : this->prenume) {
 			if (!isalpha(i) && i != ' ' && i != '-') {
-				throw invalid_argument("Preumele trebuie sa contina doar litere!");
+				throw runtime_error("Preumele trebuie sa contina doar litere!");
 			}
 		}
 
