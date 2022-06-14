@@ -9,5 +9,5 @@ Tehnologii utlizate: C++ și Qt.
 - Ene Sebastian
 - Liță Robert
 
-### Documentația și cerințele proiectului se găsesc <a href = "https://github.com/RobertLita/BestFitConfig/edit/master/README.md">aici</a>. 
+### Documentația și cerințele proiectului se găsesc <a href = "https://github.com/RobertLita/BestFitConfig/blob/master/BestFitConfig-Documentatie.pdf">aici</a>. 
 ### Un scurt demo se găsește <a href = "https://www.youtube.com/watch?v=USv6Bf5gPiM">aici</a>. 
