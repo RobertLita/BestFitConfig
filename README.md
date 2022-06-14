@@ -1,1 +1,13 @@
 # BestFitConfig
+
+În cadrul materiei de Metode de Dezvoltare Stofware, am realizat o aplicație desktop care gestionează activitatea unei săli de fitness.  
+Tehnologii utlizate: C++ și Qt.
+
+### Echipa a fost formată din:
+- Bîrsan Mihai
+- Dina Andrei
+- Ene Sebastian
+- Liță Robert
+
+### Documentația și cerințele proiectului se găsesc <a href = "https://github.com/RobertLita/BestFitConfig/edit/master/README.md">aici</a>. 
+### Un scurt demo se găsește <a href = "https://www.youtube.com/watch?v=USv6Bf5gPiM">aici</a>. 
